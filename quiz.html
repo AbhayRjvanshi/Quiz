@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Quiz Adda</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- box icons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- remix icons link -->
+    <link href="cdn.jsdelivr.netnpm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" style="font-family: 'Edu AU VIC WA NT Arrows', sans-serif; font-weight: 700; font-size: 2.5rem; color: #fff;">
+            Quiz Adda <!-- The logo text -->
+        </a>
+        <ul class="navlist">
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Quiz</a></li>
+            <li><a href="ComingSoon.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <section class="quiz-section">
+        <h1>Welcome to the Quiz</h1>
+        <form action="quiz.php" method="POST" id="quiz-container" onsubmit="submitQuiz(); return false;">
+            <label for="q1">Question 1: What is 2 + 2?</label>
+            <select name="q1" id="q1" class="form-input">
+                <option value="" disabled selected>Select your answer</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br><br>
+            
+            <label for="q2">Question 2: What is 5 + 5?</label>
+            <select name="q2" id="q2" class="form-input">
+                <option value="" disabled selected>Select your answer</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+            </select><br><br>
+
+            <button onclick="submitQuiz()">Submit Quiz</button>
+
+        </form>
+    </section>
+
+    
+    
+    <script>
+        function submitQuiz() {
+            let score = 0;
+            const formElements = document.getElementById("quiz-container").elements;
+
+        // Check answers by comparing the selected value to the correct answer
+            if (formElements["q1"].value === "4") score++;
+            if (formElements["q2"].value === "10") score++;
+
+        // Store score in sessionStorage and redirect to results page
+        sessionStorage.setItem("quizScore", score);  // Corrected variable name
+    
+        window.location.href = "result.html"; // Make sure results.html exists in your directory
+        }
+
+    </script>
+</body>
+</html>
