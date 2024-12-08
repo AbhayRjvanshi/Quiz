@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about character encoding -->
+    <meta charset="UTF-8">
+    <!-- Metadata to make the page responsive to different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Quiz Website</title>
+    <!-- Link to external CSS stylesheet for styling -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- box icons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- remix icons link -->
+    <link href="cdn.jsdelivr.netnpm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Preconnect and Font link for Edu AU VIC WA NT Arrows font (similar to your request) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+
+    <!-- Header section of the webpage -->
+    <header>
+        <!-- Website logo, replaced image with text and custom font -->
+        <a href="index.html" class="logo" style="font-family: 'Edu AU VIC WA NT Arrows', sans-serif; font-weight: 700; font-size: 2.5rem; color: #fff;">
+            Quiz Adda <!-- The logo text -->
+        </a>
+
+        <!-- Navigation menu list -->
+        <ul class="navlist">
+            <li><a href="about.html">About</a></li> <!-- Link to the About section -->
+            <li><a href="index.html">Quiz</a></li>  <!-- Link to the Quiz section -->
+            <li><a href="ComingSoon.html">Events</a></li> <!-- Link to the Events section -->
+            <li><a href="contact.html">Contact Us</a></li> <!-- Link to the Contact section -->
+        </ul>
+
+        <!-- Right-side content in the header -->
+        <div class="right-content">
+            <!-- Sign-in button with link to the login page -->
+            <a href="login.html" class="nav-btn">Login</a> <!-- Link to the Login page -->
+            <!-- Sign-up button with link to the sign-up page -->
+            <a href="sign-up.html" class="nav-btn">Sign Up</a> <!-- Link to the Sign-Up page -->
+            <!-- Menu icon for toggling the navigation menu -->
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+        <!-- hero -->
+        <!-- Hero Section -->
+<section class="hero">
+    <!-- Left side of the Hero Section -->
+    <div class="hero-text">
+        <!-- Has a slight fade animation effect -->
+        <h5 data-aos="fade-right" data-aos-duration="1200">#Play Quiz</h5>
+
+        <!-- Main headline with a cool entrance effect -->
+        <h1 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Quiz Adda</h1>
+
+        <!-- Short description with a subtle fade effect -->
+        <p data-aos="fade-up" data-aos-duration="1600" data-aos-delay="400">
+            Play fun quizzes, test your knowledge, and level up your skills. <br>Join us for some brain-teasing challenges!
+        </p>
+
+        <!-- Call to Action buttons and level selection -->
+        <div class="main-hero" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="600">
+            <a href="quiz.html" class="btn">Play Now</a> <!-- Button to start the quiz -->
+        </div>
+    </div>
+
+    <!-- Right side of the Hero Section (Image or Illustration) -->
+</section>
+
+<!-- incons -->
+<div class="icons" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000">
+    <a href="https://www.facebook.com/" class="icon"><i class="ri-facebook-circle-fill"></i><img src="facebook-133-512.png" alt="Facebook" width="35" height="35"></a>
+    <a href="https://x.com/?lang=en" class="icon"><i class="ri-twitter-fill"></i><img src="twitter-159-512.png" alt="Twitter" width="35" height="35"></a>
+    <a href="https://www.instagram.com/" class="icon"><i class="ri-instagram-fill"></i><img src="instagram-97-512.png" alt="Instagram" width="35" height="35"></a>
+    <a href="https://in.linkedin.com/" class="icon"><i class="ri-linkedin-box-fill"></i><img src="linkedin-94-512.png" alt="LinkedIn" width="40" height="40"></a>
+    <a href="https://www.youtube.com/" class="icon"><i class="ri-youtube-fill"></i><img src="youtube-120-512.png" alt="YouTube" width="35" height="35"></a>
+</div>
+    
+        <!-- scroll -->
+        <div class="scroll" data-aos="zoom-out-down" data-aos-duration="1400" data-aos-delay="550">
+            <a href="#">
+                <i class="ri-scroll-to-bottom-line">
+                    Scroll Down
+                </i>
+            </a>
+        </div>
+
+    
+        <!-- js link -->
+        <script src="js/script.js"></script>
+    
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset:1,
+            });
+        </script>
+
+<script>
+    function signup() {
+        // Perform any signup validation or action here (e.g., storing the data)
+        // After successful signup, redirect to the quiz page
+        window.location.href = "sign-up.html"; // Redirect to the quiz page
+    }
+</script>
+
+</body>
+</html>
