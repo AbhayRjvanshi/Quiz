@@ -15,10 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-
     <script src="script.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -32,37 +30,36 @@
             <li><a href="ComingSoon.html">Events</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        
+        <div class="right-content">
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
 
     <main class="results-section">
         <h1>Your Quiz Results</h1>
-        <p id="score"><?php
-            session_start();
-            // Check if the score is available in the session
-            if (isset($_SESSION['quiz_score'])) {
-                echo "Your Score: " . $_SESSION['quiz_score'] . "/2"; // Display the score
-            } else {
-                echo "No score available. Please try again.";
-            }
-            ?>Fetching your score...</p>
+        <p id="score">Fetching your score...</p>
         <a href="index.html"><button class="btn">Go to Home</button></a>
     </main>
 
-    <script>
-        // Redirect to result.php
-        window.location.href = "result.php";
-    </script>
+    <div class="scroll" data-aos="zoom-out-down" data-aos-duration="1400" data-aos-delay="550">
+        <a href="#">
+            <i class="ri-scroll-to-bottom-line">
+                Scroll Down
+            </i>
+        </a>
+    </div>
 
     <script>
-        // Function to load the quiz score from sessionStorage and display it
+        // Load and display the score when the page is loaded
         window.onload = function() {
-            const score = sessionStorage.getItem("quizScore"); // Retrieve the score
+            const score = sessionStorage.getItem("quizScore"); // Retrieve score from sessionStorage
             const scoreElement = document.getElementById("score"); // Target the score element
 
             if (score !== null) {
-                scoreElement.textContent = `Your Score: ${score}/2`; // Update the text with the score
+                scoreElement.textContent = `Your Score: ${score}/2`; // Display the score
             } else {
-                scoreElement.textContent = "No score available. Please take the quiz again."; // Fallback message
+                scoreElement.textContent = "No score available. Please take the quiz again."; // Display a fallback message
             }
         };
     </script>
